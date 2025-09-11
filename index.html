@@ -1,11 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Customize Screen</title>
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <script src="./apps.js"></script>
+
+  <!-- Formulario -->
+  <div class="login">
+    <form class="form" id="customForm">
+      <label for="nombre">Nombre</label>
+      <input type="text" class="inputNombre" name="nombre" id="nombre" required>
+
+      <label for="color">Color</label>
+      <select name="color" id="color" required>
+        <option value="" disabled selected>Select color</option>
+        <option value="Rojo">Rojo</option>
+        <option value="Verde">Verde</option>
+        <option value="Naranja">Naranja</option>
+      </select>
+
+      <fieldset>
+        <legend>Equipo</legend>
+        <input type="radio" value="Gatos" name="equipo" class="input-radio" id="gatos" required>
+        <label for="gatos">Gatos</label>
+
+        <input type="radio" value="Mapaches" name="equipo" class="input-radio" id="mapaches">
+        <label for="mapaches">Mapaches</label>
+
+        <input type="radio" name="equipo" value="Perros" class="input-radio" id="perros">
+        <label for="perros">Perros</label>
+      </fieldset>
+
+      <button type="submit">Enviar</button>
+    </form>
+  </div>
+
+  <!-- Página de usuario -->
+  <div class="userPage" style="display: none;">
+    <img class="img-equipo" src="" alt="Imagen del equipo" id="imgEquipo">
+    <h1 class="text-saludo" id="saludoUsuario">Hola Usuario</h1>
+    <p>Perteneces al equipo <span class="text-equipo" id="equipoTexto">Mapaches</span></p>
+  </div>
+
+  <script src="./app.js"></script>
 </body>
+
 </html>
