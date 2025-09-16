@@ -1,35 +1,20 @@
 const titulo = document.querySelector(".titulo");
-const contenedor = document.getElementById("contenedor");
-const btnSigui = document.querySelector(".btn-next");
-const btnAnt = document.querySelector(".btn-prev");
-const titulos = [
-    "Primera Imagen",
-    "Segunda Imagen",
-    "Tercera Imagen",
-    "Cuarta Imagen",
-    "Quinta Imagen"
-];
-let i = 0;
+const screen = document.querySelector(".screen");
+const miniaturas = document.querySelector(".contenedor-min");
 
-btnAnt.addEventListener("click", () => {
-    if (i > 0) {
-        i--;
-        titulo.textContent = titulos[i];
-        contenedor.style.marginLeft = `-${i * 400}px`;
-        contenedor.style.transitionDuration = ".5s";
-    }
-});
+console.log(titulo); // Si sale null, esta mal capturado
+console.log(screen); // Si sale null, esta mal capturado
+console.log(miniaturas); // Si sale null, esta mal capturado
 
-btnSigui.addEventListener("click", () => {
-    if (i < titulos.length - 1) {
-        i++;
-        titulo.textContent = titulos[i];
-        contenedor.style.marginLeft = `-${i * 400}px`;
-        contenedor.style.transitionDuration = ".5s";
-    }
-});
+// Función 2
+function cambiarImg(event) {
+  if(!event.target.src) return 
+  titulo.textContent = event.target.name;
+  screen.src = event.target.src;
 
-// Inicializa la galería
-titulo.textContent = titulos[i];
-contenedor.style.marginLeft = `-${i * 400}px`;
-contenedor.style.transitionDuration = ".5s";
+  document.body.style.background = `url(${event.target.src}) no-repeat center center/cover`;
+}
+
+
+// Función 3
+miniaturas.addEventListener("click", cambiarImg);

@@ -1,42 +1,58 @@
 <!DOCTYPE html>
 <html>
-<link rel="stylesheet" href="style.css">
 <head>
-	<title>Galería 1</title>
-	<style>
-		#galeria {
-			width: 400px;
-			height: 400px;
-			overflow: hidden;
+	<title></title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="style.css">
 
-		}
+<link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+<style type="text/css">
+	
+body{
+	background:#000;
+	text-align: center;
+	margin-top:140px;
+}
 
-		#contenedor {
-			width: 2020px;
-			height: 300px;
-			display: flex;
-		}
-	</style>
+.miniatura{
+	cursor:pointer;
+}
+
+.miniatura:hover{
+	opacity:.5;
+}
+
+p{
+	color:white;
+
+}
+
+h1{
+	color:white;
+	font-size: 5em;
+	font-family: 'Pacifico', cursive;
+}
+
+</style>
 </head>
-
 <body>
 
-	<p class="titulo">Primera Imagen</p>
-	<div id="galeria">
-		<div id="contenedor">
-			<img src="img1.jpg">
-			<img src="img2.jpg">
-			<img src="img3.jpg">
-			<img src="img4.jpg">
-			<img src="img5.jpg">
-		</div>
-		<br><br>
-		<button class="btn-prev">Anterior</button>
-		<button class="btn-next">Siguiente</button>
-	</div>
+<h1>Galería</h1>
+<p class="titulo">Primera imagen</p>
+<div>
+	<img class="screen" src="mario.jpg" width="400px">
+</div>
 
+<div class="contenedor-min">	
 
-<script src="./app.js"></script>
+<img class="miniatura" name="Primera imagen" src="mario.jpg" width="100px" >
+<img class="miniatura" name="Segunda imagen" src="mario2.jpg" width="100px">
+<img class="miniatura" name="Tercera imagen" src="mario3.jpg" width="100px">
+<img class="miniatura" name="Cuarta imagen" src="mario4.jpg" width="100px">
+
+</div>
+
+<script src="app.js"></script>
+
 </body>
-
 </html>
