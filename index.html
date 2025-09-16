@@ -1,18 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+<link rel="stylesheet" href="style.css">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+	<title>Galería 1</title>
+	<style>
+		#galeria {
+			width: 400px;
+			height: 400px;
+			overflow: hidden;
+
+		}
+
+		#contenedor {
+			width: 2020px;
+			height: 300px;
+			display: flex;
+		}
+	</style>
 </head>
-<body class="body">
-    <h1>Contador</h1>
-    <h1 class="pantalla">1</h1>
-    <button class="btn-menos">-</button>
-    <button class="btn-mas">+</button>
+
+<body>
+
+	<p class="titulo">Primera Imagen</p>
+	<div id="galeria">
+		<div id="contenedor">
+			<img src="img1.jpg">
+			<img src="img2.jpg">
+			<img src="img3.jpg">
+			<img src="img4.jpg">
+			<img src="img5.jpg">
+		</div>
+		<br><br>
+		<button class="btn-prev">Anterior</button>
+		<button class="btn-next">Siguiente</button>
+	</div>
 
 
-    <script src="./app.js"></script>
+<script src="./app.js"></script>
 </body>
+
 </html>

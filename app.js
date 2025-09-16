@@ -1,37 +1,35 @@
-//Seleccionar los elementos con los que va a interactuar o los que responden a la interacción
+const titulo = document.querySelector(".titulo");
+const contenedor = document.getElementById("contenedor");
+const btnSigui = document.querySelector(".btn-next");
+const btnAnt = document.querySelector(".btn-prev");
+const titulos = [
+    "Primera Imagen",
+    "Segunda Imagen",
+    "Tercera Imagen",
+    "Cuarta Imagen",
+    "Quinta Imagen"
+];
+let i = 0;
 
-const pantalla = document.querySelector(".pantalla")
-const btnMenos = document.querySelector(".btn-menos")
-const btnMas = document.querySelector(".btn-mas")
-const body = document.body;
-let counter= 0
-
-//2. Función
-
-function incrementar () {   
-    counter++ 
-    pantalla.textContent = counter
-
-    if (counter === 10) { 
-        pantalla.style.color = "red"
+btnAnt.addEventListener("click", () => {
+    if (i > 0) {
+        i--;
+        titulo.textContent = titulos[i];
+        contenedor.style.marginLeft = `-${i * 400}px`;
+        contenedor.style.transitionDuration = ".5s";
     }
-    if (counter === 30) {
-        body.style.backgroundColor = "yellow";
+});
+
+btnSigui.addEventListener("click", () => {
+    if (i < titulos.length - 1) {
+        i++;
+        titulo.textContent = titulos[i];
+        contenedor.style.marginLeft = `-${i * 400}px`;
+        contenedor.style.transitionDuration = ".5s";
     }
-}
+});
 
-function decrementar () {   
-    if (counter > 0) {
-        counter--
-        if (counter < 10) { 
-            pantalla.style.color = "black"
-        }
-        pantalla.textContent = counter
-    }
-}
-
-
-//3. Crear el evento
-
-btnMas.addEventListener("click", incrementar)
-btnMenos.addEventListener("click", decrementar)
+// Inicializa la galería
+titulo.textContent = titulos[i];
+contenedor.style.marginLeft = `-${i * 400}px`;
+contenedor.style.transitionDuration = ".5s";
