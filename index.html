@@ -1,58 +1,78 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-	<title></title>
-	<meta charset="utf-8">
-	<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eco Olvido - Landing Page (Diseño Mejorado)</title>
+    
+    <!-- Importación de Fuentes Profesionales de Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Lato:wght@400;700&display=swap" rel="stylesheet">
 
-<link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
-<style type="text/css">
-	
-body{
-	background:#000;
-	text-align: center;
-	margin-top:140px;
-}
-
-.miniatura{
-	cursor:pointer;
-}
-
-.miniatura:hover{
-	opacity:.5;
-}
-
-p{
-	color:white;
-
-}
-
-h1{
-	color:white;
-	font-size: 5em;
-	font-family: 'Pacifico', cursive;
-}
-
-</style>
+    <link rel="stylesheet" href="style.css">
+    <style>      
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
 </head>
 <body>
 
-<h1>Galería</h1>
-<p class="titulo">Primera imagen</p>
-<div>
-	<img class="screen" src="mario.jpg" width="400px">
-</div>
+    <header>
+        <h1 class="logo">Raizura</h1>
+        <h2>Eco Olvido</h2>
+        <nav id="menu-principal">
+            <ul>
+                <li><a href="#sinopsis" data-color="#f5f5f5">Sinopsis</a></li>
+                <li><a href="#personajes" data-color="#fffbe6">Personajes</a></li>
+                <li><a href="#galeria-simple" data-color="#f6ffed">Galería</a></li>
+                <li><a href="#interaccion" data-color="#e6f7ff">Interacción</a></li>
+            </ul>
+        </nav>
+    </header>
 
-<div class="contenedor-min">	
+    <main class="bento-grid">
+        <section id="sinopsis" class="bento-item span-2">
+            <h3>Capítulo 1: Eco Olvidado</h3>
+            <p>En el año 2185, la música en vivo es un recuerdo lejano. Raizura, un joven de 17 años, encuentra un piano de madera oscura y, al tocarlo, despierta algo más que solo música...</p>
+            <div id="caja-narrativa" class="caja-narrativa"><p>El ritmo sigue vivo...</p></div>
+            <div class="controles-func1">
+                <button id="mover" class="btn-primario">Despertar el Espíritu</button>
+                <button id="restaurar" class="btn-secundario">Desvanecer</button>
+            </div>
+        </section>
 
-<img class="miniatura" name="Primera imagen" src="mario.jpg" width="100px" >
-<img class="miniatura" name="Segunda imagen" src="mario2.jpg" width="100px">
-<img class="miniatura" name="Tercera imagen" src="mario3.jpg" width="100px">
-<img class="miniatura" name="Cuarta imagen" src="mario4.jpg" width="100px">
+        <section id="personajes" class="bento-item">
+            <h3>Habla con Fruko</h3>
+            <p>El fantasma de la sabrosura te escucha. Escribe tu nombre para recibir su mensaje.</p>
+            <input id="nombre" placeholder="Escribe tu nombre aquí...">
+            <button id="enviar" class="btn-primario">Enviar</button>
+            <p id="mensaje" class="respuesta-personaje">Esperando tu señal...</p>
+        </section>
 
-</div>
+        <section id="galeria-simple" class="bento-item">
+            <h3>Recuerdos del Museo</h3>
+            <div class="contenedor-galeria-simple">
+                 <img src="museo.jpeg" id="foto" alt="Recuerdo del museo de Fruko">
+                 <button id="cambiar" class="boton-galeria">Siguiente Recuerdo</button>
+            </div>
+        </section>
+        
+        <section id="interaccion" class="bento-item">
+            <h3>La Trama se Revela</h3>
+            <p>Descubre los momentos clave que definen el viaje de Raizura.</p>
+            <ul id="lista-puntos" class="lista-trama-estilizada"></ul>
+            <button id="agregar-punto" class="btn-primario">Revelar Siguiente Punto</button>
+        </section>
+    </main>
 
-<script src="app.js"></script>
+    <footer>
+        <p>Un proyecto de Santiago Rodriguez, Salome Hernández y Luis Gonzalez.</p>
+        <p>Ficha: 3168940</p>
+    </footer>
+
+    <script src="app.js"></script>
 
 </body>
 </html>
